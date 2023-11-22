@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Red+Hat+Text&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .typetext {
+            color: lime;
+            height: 20vh;
+        }
+
+        .typetext h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 20px 6px;
+            /* font-family: 'Red Hat Text', sans-serif; */
+            font-family: 'Oxygen', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .morpheous img {
+            width: 38vw;
+            height: 32vw;
+            position: relative;
+        }
+
+        .pills button {
+            border: 2px solid black;
+            border-radius: 40%;
+            padding: 3px 10px;
+            color: black;
+            position: absolute;
+            outline: none;
+            transition: 0.5s;
+            font-size: 15px;
+        }
+
+        .pills button:hover {
+            cursor: pointer;
+            background: black;
+            color: white;
+        }
+
+        #red {
+            background-color: red;
+            bottom: 13vw;
+            left: 56vw;
+            rotate: 9deg;
+        }
+
+        #blue {
+            background-color: blue;
+            bottom: 13vw;
+            left: 40vw;
+            rotate: -9deg;
+        }
+
+        @media (max-width:600px) {
+            .morpheous img {
+                width: 90vw;
+                height: 65vh;
+            }
+
+            .pills button {
+                padding: 2px 6px;
+                font-size: 10px;
+            }
+
+            #red {
+                bottom: 42.8vw;
+                left: 65vw;
+            }
+
+            #blue {
+                bottom: 42.8vw;
+                left: 26vw;
+            }
+        }
+
+        @media (min-width:375px) and (max-width:425px) {
+            .morpheous img {
+                height: 55vh;
+            }
+
+            #red {
+                bottom: 50.8vw;
+                left: 65vw;
+            }
+
+            #blue {
+                bottom: 50.8vw;
+                left: 26vw;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1024px) {
+            .morpheous img {
+                width: 55vw;
+                height: 75vh;
+            }
+
+            #red {
+                bottom: 27%;
+                left: 59.5%;
+            }
+            #blue{
+                bottom: 27%;
+                left: 35.5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="typetext">
+            <h2><span class="text">text goes here</span></h2>
+        </div>
+        <div class="morpheous">
+            <img src="./imges/pills.png" alt="">
+        </div>
+        <div class="pills">
+            <button class="pills" id="blue">Blue</button>
+            <a href="numberguessgame.html"><button class="pills" id="red">Red</button></a>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".text", {
+        strings: ["welcome player Neo.", "The matrix has you", "Unfortunately no one can be", "told what the matrix is", "This is your last chance", "Choose either one of the pill", "You Choose blue pill to stay in the matrix", "You choose red pill to escape the matrix"],
+        typeSpeed: 50,
+        backSpeed: 50,
+    })
+</script>
+
+</html>
